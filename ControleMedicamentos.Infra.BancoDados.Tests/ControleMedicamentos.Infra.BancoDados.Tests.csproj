@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ControleMedicamentos.Dominio\ControleMedicamentos.Dominio.csproj" />
     <ProjectReference Include="..\ControleMedicamentos.Infra.BancoDados\ControleMedicamentos.Infra.BancoDados.csproj" />
+    <ProjectReference Include="..\ControleMedicamentos.Projeto.BancoDados\ControleMedicamentos.Projeto.SqlServer.sqlproj" />
   </ItemGroup>
 
 </Project>

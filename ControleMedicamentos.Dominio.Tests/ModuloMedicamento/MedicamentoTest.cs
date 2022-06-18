@@ -1,6 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ControleMedicamentos.Dominio.ModuloFornecedor;
 using ControleMedicamentos.Dominio.ModuloMedicamento;
+using System;
+using FluentValidation.Results;
 
 namespace ControleMedicamentos.Dominio.Tests.ModuloMedicamento
 {
@@ -9,6 +11,7 @@ namespace ControleMedicamentos.Dominio.Tests.ModuloMedicamento
     {
         private readonly Fornecedor fornecedor;
         private readonly Medicamento medicamento;
+        private readonly MedicamentoTest validador;
 
         public MedicamentoTest()
         {
@@ -20,11 +23,19 @@ namespace ControleMedicamentos.Dominio.Tests.ModuloMedicamento
                 Cidade = "Lages",
                 Estado = "Santa Catarina"
             };
+
             medicamento = new()
             {
-                Nome = 
-            }
+                Nome = "Decongex",
+                Descricao = "Analgésico",
+                Lote = "D-001",
+                Validade = new DateTime(2022, 04, 10),
+                QuantidadeDisponivel = 100,
+                Fornecedor = fornecedor
+            };
+
+            validador = new();
         }
-        [TestMethod]
     }
 }
+

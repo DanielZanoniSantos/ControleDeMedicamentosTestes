@@ -4,10 +4,12 @@ namespace ControleMedicamentos.Infra.BancoDados
 {
     public static class Db
     {
-        private static string enderecoBanco =
-            @"Data Source=(LOCALDB)\MSSQLLOCALDB;
-              Initial Catalog=ControleMedicamentosDb;
-              Integrated Security=True";
+        private const string enderecoBanco =
+            "Data Source=(LocalDb)\\MSSQLLocalDB;" +
+            "Initial Catalog=ControleMedicamentosBanco;" +
+            "Integrated Security=True;" +
+            "Pooling=False";
+
 
         public static void ExecutarSql(string sql)
         {
